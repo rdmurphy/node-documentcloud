@@ -1,0 +1,41 @@
+{
+  "name": "documentcloud",
+  "version": "0.1.0",
+  "description": "An API client for DocumentCloud written in Node.js.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "documents.js",
+    "projects.js",
+    "apiRequest.js"
+  ]
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdmurphy/node-documentcloud.git"
+  },
+  "keywords": [
+    "documentcloud",
+    "ocr",
+    "pdf"
+  ],
+  "author": "Ryan Murphy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rdmurphy/node-documentcloud/issues"
+  },
+  "homepage": "https://github.com/rdmurphy/node-documentcloud#readme",
+  "devDependencies": {
+    "eslint": "^2.3.0",
+    "eslint-config-standard": "^5.1.0",
+    "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-standard": "^1.3.2"
+  },
+  "dependencies": {
+    "request": "^2.69.0",
+    "urijs": "^1.17.1",
+    "validator": "^5.1.0"
+  }
+}
