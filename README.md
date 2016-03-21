@@ -40,7 +40,7 @@ The client interface makes it possible to pass in your DocumentCloud username an
 var DocumentCloudClient = require('documentcloud');
 
 // create a client
-var client = new DocumentClient('username', 'password');
+var client = new DocumentCloudClient('username', 'password');
 
 // get to work!
 client.documents.get('1659580-economic-analysis-of-the-south-pole-traverse', function (err, response) {
