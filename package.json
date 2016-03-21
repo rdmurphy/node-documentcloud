@@ -8,7 +8,7 @@
     "documents.js",
     "projects.js",
     "apiRequest.js"
-  ]
+  ],
   "scripts": {
     "test": "eslint ."
   },
