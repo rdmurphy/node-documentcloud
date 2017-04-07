@@ -106,6 +106,23 @@ Creates a project.
     -   `opts.document_ids` **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).&lt;[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)>=** List documents to be associated to this project, by document identifier
 -   `callback` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** Callback to handle API response
 
+**Examples**
+
+```javascript
+var title = 'This is an awesome project';
+
+var opts = {
+    description: 'This is a description',
+    document_ids: ['1659580-economic-analysis-of-the-south-pole-traverse']
+    };
+
+client.projects.create(title, opts, function(err, response) {
+    if (err) throw err;
+    console.log(response)
+    // do stuff
+});
+```
+
 #### delete
 
 Deletes a project. Documents associated with the project are not effected.
@@ -258,6 +275,37 @@ URL to a public file.
     -   `opts.force_ocr` **[Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)=** Forces a document to OCR'd even if it has text
     -   `opts.published_url` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)=** URL of page where document will be embedded
 -   `callback` **[Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)** Callback that handles the API response
+
+**Examples**
+
+```javascript
+var file ='http://www.hid.uscourts.gov/docs/orders/DKW_order.pdf';
+
+var title = 'Hawaii travel ruling';
+
+var opts = {
+        source: 'US District Court for the District of Hawaii',
+        description: 'Order granting motion to convert temporary restraining order to a preliminary injunction.',
+        language: 'eng',
+        related_article: 'http://www.cnn.com/2017/03/29/politics/hawaii-trump-travel-ban-extended/',
+        access: 'public',
+        project: 12345,
+        data: {
+            date_filed: '2017-03-29',
+            uscourt: 'usdcdhi',
+            case_no: '1:17-cv-00050-DKW-KSC'
+        },
+        secure: false,
+        force_ocr: true,
+        published_url: 'http://www.cnn.com/2017/03/30/politics/travel-ban-hawaii-full-text'
+    };
+
+client.documents.upload(file, title, opts, function(err, response) {
+    if (err) throw err;
+    console.log(response)
+    // do stuff
+});
+```
 
 ## Major Thanks
 
