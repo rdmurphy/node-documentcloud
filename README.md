@@ -284,20 +284,20 @@ var file ='http://www.hid.uscourts.gov/docs/orders/DKW_order.pdf';
 var title = 'Hawaii travel ruling';
 
 var opts = {
-    source: 'US District Court for the District of Hawaii',
-    description: 'Order granting motion to convert temporary restraining order to a preliminary injunction.',
-    language: 'eng',
-    related_article: 'http://www.cnn.com/2017/03/29/politics/hawaii-trump-travel-ban-extended/',
-    access: 'public',
-    project: 12345,
-    data: {
-        date_filed: '2017-03-29',
-        uscourt: 'usdcdhi',
-        case_no: '1:17-cv-00050-DKW-KSC'
-    },
-    secure: false,
-    force_ocr: true,
-    published_url: 'http://www.cnn.com/2017/03/30/politics/travel-ban-hawaii-full-text'
+        source: 'US District Court for the District of Hawaii',
+        description: 'Order granting motion to convert temporary restraining order to a preliminary injunction.',
+        language: 'eng',
+        related_article: 'http://www.cnn.com/2017/03/29/politics/hawaii-trump-travel-ban-extended/',
+        access: 'public',
+        project: 12345,
+        data: {
+            date_filed: '2017-03-29',
+            uscourt: 'usdcdhi',
+            case_no: '1:17-cv-00050-DKW-KSC'
+        },
+        secure: false,
+        force_ocr: true,
+        published_url: 'http://www.cnn.com/2017/03/30/politics/travel-ban-hawaii-full-text'
     };
 
 client.documents.upload(file, title, opts, function(err, response) {
